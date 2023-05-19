@@ -1,0 +1,38 @@
+[
+  {
+    "description": "The project that contains the dataset and tables loaded", 
+    "mode": "REQUIRED", 
+    "name": "Project", 
+    "type": "STRING"
+  }, 
+  {
+    "description": "The dataset that contains the tables loaded", 
+    "mode": "REQUIRED", 
+    "name": "Dataset", 
+    "type": "STRING"
+  }, 
+  {
+    "description": "Table name in the dwh or marts", 
+    "mode": "REQUIRED", 
+    "name": "TableName", 
+    "type": "STRING"
+  }, 
+  {
+    "description": "Date/time you want to compare against in data loads to DWH or mart", 
+    "mode": "REQUIRED", 
+    "name": "RunDate", 
+    "type": "TIMESTAMP"
+  }, 		
+  {
+    "description": "Last date/time table was updated", 
+    "mode": "REQUIRED", 
+    "name": "ETLDate", 
+    "type": "TIMESTAMP"
+  },
+  {
+    "description": "Flag to specify where full load or not", 
+    "mode": "REQUIRED", 
+    "name": "FullLoad", 
+    "type": "BOOLEAN"
+  }
+]
