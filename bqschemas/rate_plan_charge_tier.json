@@ -1,0 +1,152 @@
+[
+  {
+    "description": "TBD.",
+    "mode": "REQUIRED",
+    "name": "RatePlanChargeTierID",
+    "type": "STRING"
+  },
+  {
+    "description": "TBD.",
+    "mode": "REQUIRED",
+    "name": "FiveTranDeleted",
+    "type": "BOOLEAN"
+},
+{
+    "description": "TBD.",
+    "mode": "REQUIRED",
+    "name": "FiveTranSynced",
+    "type": "TIMESTAMP"
+},
+  {
+    "description": "TBD.",
+    "mode": "REQUIRED",
+    "name": "CreatedByID",
+    "type": "STRING"
+  },
+  {
+    "description": "TBD.",
+    "mode": "REQUIRED",
+    "name": "CreatedDate",
+    "type": "TIMESTAMP"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "Currency",
+    "type": "STRING"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "DiscountAmount",
+    "type": "FLOAT"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "DiscountPercentage",
+    "type": "FLOAT"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "EndingUnit",
+    "type": "FLOAT"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "IncludedUnits",
+    "type": "FLOAT"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "OveragePrice",
+    "type": "FLOAT"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "Price",
+    "type": "FLOAT"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "PriceFormat",
+    "type": "STRING"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "ProductID",
+    "type": "STRING"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "ProductRatePlanChargeID",
+    "type": "STRING"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "ProductRatePlanID",
+    "type": "STRING"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "RatePlanChargeID",
+    "type": "STRING"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "RatePlanID",
+    "type": "STRING"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "StartingUnit",
+    "type": "FLOAT"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "SubscriptionID",
+    "type": "STRING"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "Tier",
+    "type": "INTEGER"
+  },
+  {
+    "description": "TBD.",
+    "mode": "REQUIRED",
+    "name": "UpdatedByID",
+    "type": "STRING"
+  },
+  {
+    "description": "TBD.",
+    "mode": "REQUIRED",
+    "name": "UpdatedDate",
+    "type": "TIMESTAMP"
+  },
+  {
+    "description": "TBD.",
+    "mode": "NULLABLE",
+    "name": "AmendmentID",
+    "type": "STRING"
+  },
+  {
+    "description": "Data warehouse data load date.",
+    "mode": "REQUIRED",
+    "name": "ETLDate",
+    "type": "TIMESTAMP"
+  }
+]

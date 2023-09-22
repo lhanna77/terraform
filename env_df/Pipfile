@@ -1,0 +1,12 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+apache-beam = {version = "==2.48.0", extras = ["gcp"]}
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

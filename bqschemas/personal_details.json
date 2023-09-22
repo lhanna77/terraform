@@ -1,0 +1,51 @@
+[
+  {
+      "fields": [
+              {
+                  "name": "name",
+                  "type": "STRING",
+                  "mode": "REQUIRED",
+                  "description": "name"
+              },{
+                  "name": "address",
+                  "type": "RECORD",
+                  "mode": "REPEATED",
+                  "description": "address",
+                  "fields": [
+                    {
+                      "name": "status",
+                      "type": "STRING",
+                      "mode": "NULLABLE",
+                      "description": "status"
+                    },
+                    {
+                      "name": "town",
+                      "type": "STRING",
+                      "mode": "NULLABLE",
+                      "description": "town"
+                    },
+                    {
+                      "name": "postCode",
+                      "type": "STRING",
+                      "mode": "NULLABLE",
+                      "description": "postCode"
+                    }
+                  ]
+              },{
+                  "name": "age",
+                  "type": "INTEGER",
+                  "mode": "NULLABLE",
+                  "description": "age"
+              }
+      ],
+      "mode": "REQUIRED",
+      "name": "dataLake",
+      "type": "RECORD"
+  }, 
+  {
+    "description": "Date/time you want to compare against in data loads to DWH or mart", 
+    "mode": "REQUIRED", 
+    "name": "runDate", 
+    "type": "TIMESTAMP"
+  }
+] 
