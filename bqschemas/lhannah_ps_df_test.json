@@ -1,0 +1,17 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "timestamp",
+    "type": "TIMESTAMP"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "attr1",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "msg",
+    "type": "STRING"
+  }
+]

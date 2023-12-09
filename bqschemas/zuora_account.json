@@ -1,0 +1,442 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "_fivetran_deleted",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "_fivetran_synced",
+    "type": "TIMESTAMP"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "account_number",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "additional_email_addresses",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "allow_invoice_edit",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "apm_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "auto_pay",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "balance",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "batch",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "bcd_setting_option",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "bill_cycle_day",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "bill_to_contact_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "billing_threshold_balance_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "billing_threshold_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "collections_agent_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "communication_profile_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "created_by_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "created_date",
+    "type": "TIMESTAMP"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "credit_balance",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "credit_check_comments_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "credit_check_reference_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "credit_limit_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "credit_risk_status_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "credit_status_comments_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "crm_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "currency",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "customer_service_rep_name",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "default_payment_method_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "department_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ecomm_account_id_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "first_threshold_check_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "in_collections_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "invoice_delivery_prefs_email",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "invoice_delivery_prefs_print",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "invoice_template_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "last_invoice_date",
+    "type": "DATE"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "mrr",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "name",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "notes",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "oracle_intercompany_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "parent_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "payment_gateway",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "payment_term",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "pocomments_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "porequired_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "purchase_order_number",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "retry_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "retry_status_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sales_rep_name",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sequence_set_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "sold_to_contact_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "special_billing_instructions_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "status",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "surchargeable_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_codice_destinatario_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_company_code",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_exempt_certificate_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_exempt_certificate_type",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_exempt_description",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_exempt_effective_date",
+    "type": "DATE"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_exempt_entity_use_code",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_exempt_expiration_date",
+    "type": "DATE"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_exempt_issuing_jurisdiction",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_exempt_status",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_exemption_expiry_date_c",
+    "type": "DATE"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_fiscal_code_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_pecemail_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_registration_number_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_vat_code_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "total_debit_memo_balance",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "total_invoice_balance",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "unapplied_balance",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "unapplied_credit_memo_amount",
+    "type": "FLOAT"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "updated_by_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "updated_date",
+    "type": "TIMESTAMP"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "vatid",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "onboard_channel_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "partner_account",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "last_metrics_update",
+    "type": "TIMESTAMP"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "parent_account_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_exempt_certificate_type_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_exempt_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "payment_method_priority_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "tax_exemption_expiry_date_1_c",
+    "type": "DATE"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "payment_method_cascading_consent",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "fraud_risk_status_c",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "roll_up_usage",
+    "type": "BOOLEAN"
+  }
+]

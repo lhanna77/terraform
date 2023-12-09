@@ -1,0 +1,71 @@
+{
+  "fields": 
+[
+  {
+    "mode": "NULLABLE",
+    "name": "Project",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "Dataset",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "TableName",
+    "type": "STRING"
+  },
+  {
+    "fields": [
+      {
+        "mode": "REPEATED",
+        "name": "Name",
+        "type": "STRING"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "ChildTable",
+    "type": "RECORD"
+  },
+  {
+    "fields": [
+      {
+        "mode": "REPEATED",
+        "name": "Name",
+        "type": "STRING"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "ChildPipeline",
+    "type": "RECORD"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "RunDate",
+    "type": "TIMESTAMP"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ETLDate",
+    "type": "TIMESTAMP"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "FullLoad",
+    "type": "BOOLEAN"
+  },
+  {
+    "description": "Person who last updated the table",
+    "mode": "NULLABLE",
+    "name": "UpdatedBy",
+    "type": "STRING"
+  },
+  {
+    "description": "Date / Time the table was last updated",
+    "mode": "NULLABLE",
+    "name": "UpdatedAt",
+    "type": "TIMESTAMP"
+  }
+]
+}

@@ -1,3 +1,4 @@
+
 [
   {
     "mode": "NULLABLE",
@@ -52,17 +53,18 @@
     "mode": "NULLABLE",
     "name": "FullLoad",
     "type": "BOOLEAN"
-  }, 
+  },
   {
-    "description": "Person who last updated the table", 
-    "mode": "NULLABLE", 
-    "name": "UpdatedBy", 
+    "description": "Person who last updated the table",
+    "mode": "NULLABLE",
+    "name": "UpdatedBy",
     "type": "STRING"
-  }, 
+  },
   {
-    "description": "Date / Time the table was last updated", 
+    "description": "Date / Time the table was last updated",
     "mode": "NULLABLE",
     "name": "UpdatedAt",
     "type": "TIMESTAMP"
   }
 ]
+

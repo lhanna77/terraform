@@ -14,17 +14,14 @@ variable "env" {
     } 
 }
 
-# buckets
-
-locals {
-  
-    delete_age_pick = var.storage_class == "COLDLINE" ? 90 : var.storage_class == "NEARLINE" ? 30 : var.delete_age
-    storage_class_pick = var.storage_class == "COLDLINE" ? "COLDLINE" : var.storage_class == "NEARLINE" ? "NEARLINE" : var.storage_class
-
+variable "storage_dirs" {
+  type    = list(string)
+  default = ["storage_transfer_sink/schema/", "storage_transfer_sink/jsonl/", "df/", "state/"]
 }
 
 variable "bucket_names" { default = ["lhannah-bucket-test", "lhannah-bucket-test2"] }
 variable "storage_class" { default = "STANDARD" }
+variable "versioning_enabled" { default = false }
 
 variable "delete_age" {
     type = string

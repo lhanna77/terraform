@@ -1,54 +1,52 @@
+locals {
+  lst_dict_bq_tables = {
+    data_control = {
+      table = "DataControl"
+      schema = "data_control.json"
+      partition = "RunDate"
+    }
+    data_control_backup = {
+      table = "DataControl_backup"
+      schema = "data_control.json"
+      partition = "RunDate"
+    }
+    storage_transfer_run_results = {
+      table = "StorageTransferRunResults"
+      schema = "storage_transfer_run_results.json"
+      partition = "RunDate"
+    }
+    lhannah_ps_df_test = {
+      table = "LhannahPsDfTest"
+      schema = "lhannah_ps_df_test.json"
+      partition = "timestamp"
+    }
+    budget_rates = {
+      table = "BudgetRates"
+      schema = "budget_rates.json"
+      partition = "DateAdded"
+    }
+  }
+}
+
 module "lhannah_dataset_test" {
     source = "./modules/dataset"
     project = var.project
     dataset_id = "lhannah_dataset_test"
 }
 
-# module "lhannah_table_schema_test" {
-#   source = "./modules/tables"
-#   project = var.project
-#   dataset_id = module.lhannah_dataset_test.dataset_id
-#   table_names = ["schema_test"]
-#   schema_name = "personal_details.json"
-#   global_env = "dev"
-# }
-
-module "lhannah_table_dev_ds_test" {
+module "lhannah_tables_dev" {
+  for_each = local.lst_dict_bq_tables
   source = "./modules/tables"
   project = var.project
   dataset_id = module.lhannah_dataset_test.dataset_id
-  table_names = ["DataControl"]
-  schema_name = "data_control.json"
+  table_names = [each.value.table]
+  schema_name = each.value.schema
   global_env = "dev"
+  partitioning_field = each.value.partition
 }
 
-module "lhannah_table_dev_ds_test_backup" {
-  source = "./modules/tables"
-  project = var.project
-  dataset_id = module.lhannah_dataset_test.dataset_id
-  table_names = ["DataControl_backup"]
-  schema_name = "data_control.json"
-  global_env = "dev"
-}
+output "dataset_name" { value = module.lhannah_dataset_test.dataset_id }
+output "table_names" { value = [ for m in module.lhannah_tables_dev : m.t_n[0] ] }
 
-module "lhannah_table_dev_RatePlanChargeTier" {
-  source = "./modules/tables"
-  project = var.project
-  dataset_id = module.lhannah_dataset_test.dataset_id
-  table_names = ["RatePlanChargeTier"]
-  schema_name = "rate_plan_charge_tier.json"
-  global_env = "dev"
-  partitioning_field = "CreatedDate"
-}
 
-module "lhannah_table_dev_JobAppliesCurrent" {
-  source = "./modules/tables"
-  project = var.project
-  dataset_id = module.lhannah_dataset_test.dataset_id
-  table_names = ["JobAppliesCurrent"]
-  schema_name = "job_applies_current.json"
-  global_env = "dev"
-  partitioning_field = "ingestionTime"
-}
 
-#output "dataset_id" { value = module.lhannah_dataset_test.dataset_id }

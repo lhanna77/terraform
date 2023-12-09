@@ -1,0 +1,13 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "data",
+    "type": "STRING",
+    "description": "The data"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "RunDate",
+    "type": "TIMESTAMP"
+  }
+]

@@ -94,7 +94,7 @@
       {
         "description": "Unique apply identifier",
         "mode": "REQUIRED",
-        "name": "jobEmploymetTypeId",
+        "name": "id",
         "type": "INTEGER"
       },
       {
@@ -268,12 +268,22 @@
             "description": "First Name of #pii_name",
             "mode": "REQUIRED",
             "name": "firstName",
+            "policyTags": {
+              "names": [
+                "projects/mstr-sevenseas-dev-cd2c/locations/us/taxonomies/2606970344103811139/policyTags/3215306104577798878"
+              ]
+            },
             "type": "STRING"
           },
           {
             "description": "Users last name #pii_name",
             "mode": "REQUIRED",
             "name": "lastName",
+            "policyTags": {
+              "names": [
+                "projects/mstr-sevenseas-dev-cd2c/locations/us/taxonomies/2606970344103811139/policyTags/3215306104577798878"
+              ]
+            },
             "type": "STRING"
           }
         ],
@@ -300,6 +310,11 @@
             "description": "Name of the document (e.g. filename) #pii_profile",
             "mode": "REQUIRED",
             "name": "name",
+            "policyTags": {
+              "names": [
+                "projects/mstr-sevenseas-dev-cd2c/locations/us/taxonomies/2606970344103811139/policyTags/3627213357660742042"
+              ]
+            },
             "type": "STRING"
           }
         ],
@@ -341,6 +356,11 @@
                 "description": "Contact email address #pii_email_address",
                 "mode": "NULLABLE",
                 "name": "email",
+                "policyTags": {
+                  "names": [
+                    "projects/mstr-sevenseas-dev-cd2c/locations/us/taxonomies/2606970344103811139/policyTags/7052265152383936499"
+                  ]
+                },
                 "type": "STRING"
               },
               {
@@ -356,6 +376,11 @@
                     "description": "Phone Number #pii_phone_number",
                     "mode": "REQUIRED",
                     "name": "phoneNumber",
+                    "policyTags": {
+                      "names": [
+                        "projects/mstr-sevenseas-dev-cd2c/locations/us/taxonomies/2606970344103811139/policyTags/2829238348547495987"
+                      ]
+                    },
                     "type": "STRING"
                   },
                   {
@@ -733,12 +758,22 @@
                 "description": "Address Line 1 #pii_location_address",
                 "mode": "NULLABLE",
                 "name": "addressLine1",
+                "policyTags": {
+                  "names": [
+                    "projects/mstr-sevenseas-dev-cd2c/locations/us/taxonomies/2606970344103811139/policyTags/7014589227707618950"
+                  ]
+                },
                 "type": "STRING"
               },
               {
                 "description": "Address Line 2 #pii_location_address",
                 "mode": "NULLABLE",
                 "name": "addressLine2",
+                "policyTags": {
+                  "names": [
+                    "projects/mstr-sevenseas-dev-cd2c/locations/us/taxonomies/2606970344103811139/policyTags/7014589227707618950"
+                  ]
+                },
                 "type": "STRING"
               },
               {
@@ -775,6 +810,11 @@
                 "description": "Address Postal Code #pii_location_postalcode",
                 "mode": "NULLABLE",
                 "name": "postalCode",
+                "policyTags": {
+                  "names": [
+                    "projects/mstr-sevenseas-dev-cd2c/locations/us/taxonomies/2606970344103811139/policyTags/4972673195657535302"
+                  ]
+                },
                 "type": "STRING"
               },
               {
@@ -947,6 +987,11 @@
                 "description": "User entered value for link description #pii_profile",
                 "mode": "REQUIRED",
                 "name": "description",
+                "policyTags": {
+                  "names": [
+                    "projects/mstr-sevenseas-dev-cd2c/locations/us/taxonomies/2606970344103811139/policyTags/3627213357660742042"
+                  ]
+                },
                 "type": "STRING"
               },
               {
@@ -959,6 +1004,11 @@
                 "description": "User entered URL #pii_profile",
                 "mode": "REQUIRED",
                 "name": "url",
+                "policyTags": {
+                  "names": [
+                    "projects/mstr-sevenseas-dev-cd2c/locations/us/taxonomies/2606970344103811139/policyTags/3627213357660742042"
+                  ]
+                },
                 "type": "STRING"
               }
             ],
@@ -1219,6 +1269,11 @@
                 "description": "Name of the document #pii_profile",
                 "mode": "REQUIRED",
                 "name": "name",
+                "policyTags": {
+                  "names": [
+                    "projects/mstr-sevenseas-dev-cd2c/locations/us/taxonomies/2606970344103811139/policyTags/3627213357660742042"
+                  ]
+                },
                 "type": "STRING"
               },
               {
