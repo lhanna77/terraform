@@ -1,0 +1,44 @@
+[
+  {
+    "mode": "REQUIRED",
+    "name": "subscription_name",
+    "type": "STRING"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "message_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "publish_time",
+    "type": "INTEGER"
+  },
+  {
+    "fields": [
+      {
+        "mode": "REQUIRED",
+        "name": "key",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "value",
+        "type": "STRING"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "attributes",
+    "type": "RECORD"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "data",
+    "type": "BYTES"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "RunDate",
+    "type": "TIMESTAMP"
+  }
+]

@@ -61,7 +61,7 @@ class JsonlToBigQuery:
 project_id = "mstr-globalbi-sbx-c730"
 dataset_id = "dev_lhannah_dataset_test"
 table_id = "prd_lhannah_table_test_2"
-bucket_id = 'gs://lhannah-bucky-qa/df'
+bucket_id = 'gs://lhannah-sink-dev/df'
 jsonl_file_path = 'files/json/flat.json'
 #jsonl_file_path = r'C:\Users\lehannah\OneDrive - Monster_AD\Monster Files\Learning\Terraform\Udemy\terraform\files\json\flat.json'
 schema_file_path = 'bqschemas/data_control.json'

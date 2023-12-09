@@ -30,12 +30,14 @@
 
 # The Init command is used to initialize a working directory containing Terraform configuration files.
 # This is the first command that should be run after writing a new Terraform configuration
-terraform init
+terraform init #-upgrade
 
 #The Get command is used to download and update modules mentioned in the root module.
 terraform get
 
 #The Plan command is used to create an execution plan
 terraform plan
+
+terraform apply -auto-approve
 
 ######################################################################################

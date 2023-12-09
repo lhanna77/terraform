@@ -7,7 +7,7 @@ from lib.dataflow_jsonl_bigquery import dataflow_jsonl_bigquery
 
 def main():
 
-    default_bucket = 'lhannah-bucky-qa'
+    default_bucket = 'lhannah-sink-dev'
 
     tables_to_populate = [
     # {'file_format':'json','file_name':'sfmc','bucket':default_bucket,'table_id':'dev_sfmc'},
@@ -15,7 +15,7 @@ def main():
     # {'file_format':'json','file_name':'nested','bucket':default_bucket,'table_id':'dev_schema_test'},
     # {'file_format':'json','file_name':'flat','bucket':default_bucket,'table_id':'prd_lhannah_table_test'},
     # {'file_format':'json','file_name':'query1','bucket':default_bucket,'table_id':'dev_query1'},
-    {'file_format':'json','file_name':'DataControl','bucket':default_bucket,'table_id':'dev_DataControl'}
+    {'file_format':'json','file_name':'JobAppliesCurrentV2','bucket':default_bucket,'table_id':'dev_JobAppliesCurrent'}
     ]
 
     for t in tables_to_populate:

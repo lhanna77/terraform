@@ -18,6 +18,18 @@ locals {
   }
 }
 
+# resource "google_service_account" "service_accounts" {
+#   project = var.project
+#   account_id = "svc-lhannah-ps-df-test-sa"
+#   display_name = "lhannah test sa"
+# }
+
+# resource "google_project_iam_member" "pubsub_subscriber" {
+#   project = var.project
+#   role    = "roles/pubsub.subscriber"
+#   member  = "serviceAccount:${google_service_account.service_accounts.email}"
+# }
+
 # output "service_accounts" {
 #   value = merge(local.service_accounts, local.service_accounts_config.cloud_scheduler)
 #   #value = lookup(local.service_accounts,"name","???")

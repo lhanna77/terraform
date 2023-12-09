@@ -1,0 +1,54 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "YearKey",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "SourceRateCode",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "SourceRateCountry",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "DestinationRateCode",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "DestinationRateCountry",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "RateValue",
+    "type": "FLOAT"
+  },
+  {
+    "description": "%m/%d/%Y %H:%M:%E*S",
+    "mode": "NULLABLE",
+    "name": "DateAdded",
+    "type": "TIMESTAMP"
+  },
+  {
+    "description": "%m/%d/%Y %H:%M:%E*S",
+    "mode": "NULLABLE",
+    "name": "LastModifiedDate",
+    "type": "TIMESTAMP"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "AddedBy",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ModifiedBy",
+    "type": "STRING"
+  }
+]
