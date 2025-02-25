@@ -1,8 +1,6 @@
 from google.cloud import storage
 from datetime import datetime
 
-
-
 def upload_to_storage_bucket(file_name, file_path, bucket_id):
 	"""
 	Uploads a file to a storage bucket from a file location.

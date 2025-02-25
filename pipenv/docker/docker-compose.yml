@@ -1,0 +1,40 @@
+services:
+  synergy-python-dev:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: synergy-python-dev-image
+    container_name: synergy-python-dev-container
+    command: uvicorn src.main:app --host 0.0.0.0 --port 80 --reload
+    ports:
+      - "80:80"
+    volumes:
+      - .:/code
+    depends_on:
+      - redis
+      - mysql
+    environment:
+      MYSQL_DATABASE_NAME: 'synergy'
+      MYSQL_ROOT_PASSWORD: 'synergyHB!1' # Password for root access
+
+  redis:
+    image: redis:alpine
+    container_name: synergy-redis-dev-container
+
+  mysql:
+    image: mysql:8.0
+    container_name: synergy-mysql-dev-container
+    hostname: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'synergy'
+      MYSQL_ROOT_PASSWORD: 'synergyHB!1' # Password for root access
+    ports:
+      - "3307:3306" # Host port 3307 to container port 3306
+    expose:
+      - "3306"
+    volumes:
+      - mysql_data:/var/lib/mysql # Use a named volume for data persistence
+
+volumes:
+  mysql_data:

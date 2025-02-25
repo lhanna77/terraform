@@ -1,0 +1,47 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "EquipmentId",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "EquipmentCode",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "EquipmentName",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "EquipmentLocation",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "InstallationDate",
+    "type": "DATE"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "IsDeleted",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ValidFrom",
+    "type": "DATE"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ValidTo",
+    "type": "DATE"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "IsCurrent",
+    "type": "BOOLEAN"
+  }
+]

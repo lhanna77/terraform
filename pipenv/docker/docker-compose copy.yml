@@ -1,0 +1,37 @@
+services:
+  lhanna12-python-dev:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: lhanna12-python-dev-image
+    container_name: lhanna12-python-dev-container
+    command: uvicorn src.main:app --host 0.0.0.0 --port 80 --reload
+    ports:
+      - 80:80
+      # - 5678:5678
+    volumes:
+      - .:/code
+    depends_on:
+      - redis
+      - mysql
+  redis:
+    image: redis:alpine
+    container_name: lhanna12-redis-dev-container
+  mysql:
+    image: mysql:8.0
+    container_name: lhanna12-mysql-dev-container
+    hostname: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'lola21SB!1'
+    ports:
+      # <Port exposed> : <MySQL Port running inside container>
+      - '3307:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '3306'
+      # Where our data will be persisted
+    volumes:
+      - ./src/mysql:/var/lib/mysql

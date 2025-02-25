@@ -39,6 +39,11 @@ values - takes a map and returns a list containing the values of the elements in
 formatlist - produces a list of strings by formatting a number of other values according to a specification string.
     formatlist("${local.sink_path}%s", local.source_path_list)
 
+List
+output "services" { value = tolist(google_project_service.ga[*].service) }
+
+
+
 ## Types
 
 string-"cat"

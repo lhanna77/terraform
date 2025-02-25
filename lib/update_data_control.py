@@ -23,15 +23,17 @@ def data_control_backup(dataset_id,table_id):
 
 def get_table_list(dataset_id,table_id,condition_dataset_name,condition_table_name):
 
+    #TODO Uncomment ChildTable final_results_list.extend for table if DataControl updated with new structure.
+
     sql_query = f"""
         SELECT
             dc.Dataset,
-            dc.TableName,
-            ARRAY_TO_STRING( ct.Name,',') AS ChildTable
+            dc.TableName#,
+            #ARRAY_TO_STRING( ct.Name,',') AS ChildTable
         FROM
             `{dataset_id}.{table_id}` dc
-        INNER JOIN
-            UNNEST (ChildTable) ct
+        #INNER JOIN
+        #    UNNEST (ChildTable) ct
         WHERE
             Dataset = '{condition_dataset_name}'
         AND
@@ -42,7 +44,7 @@ def get_table_list(dataset_id,table_id,condition_dataset_name,condition_table_na
     # Add main table entry first
     final_results_list = [f'{row[0]}.{row[1]}' for row in query_job] 
     # Append child tables (if any)
-    final_results_list.extend(entry for row in query_job if row[2] for entry in row[2].split(','))
+    #final_results_list.extend(entry for row in query_job if row[2] for entry in row[2].split(','))
     
     return final_results_list
 
@@ -80,7 +82,7 @@ def get_table_list(dataset_id,table_id,condition_dataset_name,condition_table_na
 #         print(f"Failed to trigger DAG {dag_id}. Status code: {response.status_code}")
         
 
-def update_data_control(run_date, full_load, condition_dataset_name, condition_table_name, project = 'mstr-globalbi-sbx-c730', user_name = getlogin()):
+def update_data_control(run_date, full_load, condition_dataset_name, condition_table_name, project = 'mstr-globalbi-dev-3a2f', user_name = getlogin()):
 
     """
         Function to set dates for custom incremental load or flag for full pull. Full pull date will be set to - '1980-01-01 00:00:00 UTC'
@@ -93,8 +95,8 @@ def update_data_control(run_date, full_load, condition_dataset_name, condition_t
         project = - Project where DataControl table is stored. 
     """
 
-    dataset_id = f'{project}.dev_lhannah_dataset_test'
-    table_id = 'dev_dev_ds_test'
+    dataset_id = f'{project}.GBIAdmin'
+    table_id = 'DataControl'
 
     data_control_backup(dataset_id,table_id)
     final_results_list = get_table_list(dataset_id,table_id,condition_dataset_name,condition_table_name)
@@ -123,7 +125,9 @@ def update_data_control(run_date, full_load, condition_dataset_name, condition_t
             WHERE Dataset = '{ds}' AND TableName = '{tbl}'
         """
         
-        query_job = client.query(update_statement)
+        # query_job = client.query(update_statement)
+        
+        print(update_statement)
         #results = query_job.result()
         
         print(f'{t} row in {dataset_id}.{table_id} updated to full_load:{full_load} / run_date:{run_date}, updated by {user_name}')
@@ -157,10 +161,21 @@ if __name__ == '__main__':
     
     selected_option = get_project_selection()
     print(f"\nYou selected: {selected_option}!\n")
-    update_data_control('2023-01-01 00:00:00 UTC', False, 'GoogleAnalytics', 'GoogleAnalyticsSeekerProfileCreation')    #, selected_option
+    update_data_control('2024-02-20 00:00:00 UTC', False, 'JobApplies', 'JobAppliesHistory')    #, selected_option
 
 
 # run_date = '2023-07-31 00:00:00 UTC'
 # full_load = False
 # condition_dataset_name = 'GoogleAnalytics'
 # condition_table_name = 'GoogleAnalyticsSeekerProfileCreation'
+
+#####
+
+# UPDATE `mstr-globalbi-dev-3a2f.GBIAdmin.DataControl`
+# SET RunDate = '2024-02-20 00:00:00 UTC', FullLoad = False
+# WHERE Dataset = 'Profiles' AND TableName IN ('ProfilesCurrent','ProfilesHistory')
+
+# UPDATE `mstr-globalbi-dev-3a2f.GBIAdmin.DataControl`
+# SET RunDate = '2024-02-20 00:00:00 UTC', FullLoad = False
+# WHERE Dataset = 'JobApplies' AND TableName IN ('JobApplies','JobAppliesHistory')
+

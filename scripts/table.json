@@ -1,0 +1,77 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "ecomAccountId",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "role",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "userId",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "appUserId",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "userCreateDate",
+    "type": "TIMESTAMP"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "firstName",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "lastName",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "email",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "emailNotifications",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "languageTag",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "hasLoggedInBefore",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "isBlocked",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "userBlockedStatus",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "inactive",
+    "type": "BOOLEAN"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "rowNoAccUserID",
+    "type": "INTEGER"
+  }
+]

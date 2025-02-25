@@ -1,0 +1,58 @@
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  DOCKER_HUB_REPO: lhanna12/spark-job  # Replace with your Docker Hub username.
+  IMAGE_TAG: latest
+
+stages:
+  - stage: Build
+    displayName: "Build and Push Docker Image"
+    jobs:
+      - job: BuildAndPush
+        displayName: "Build & Push Docker Image"
+        steps:
+          - task: Docker@2
+            displayName: "Login to Docker Hub"
+            inputs:
+              command: login
+              containerRegistry: DockerHubServiceConnection  # Must match service connection name
+
+          - task: Docker@2
+            displayName: "Build Docker Image"
+            inputs:
+              command: build
+              dockerfile: "Dockerfile"
+              repository: "$(DOCKER_HUB_REPO)"
+              tags: "$(IMAGE_TAG)"
+
+          - task: Docker@2
+            displayName: "Push Docker Image"
+            inputs:
+              command: push
+              repository: "$(DOCKER_HUB_REPO)"
+              tags: "$(IMAGE_TAG)"
+
+  - stage: Deploy
+    displayName: "Deploy and Run Spark Job"
+    dependsOn: Build
+    jobs:
+      - job: DeploySparkJob
+        displayName: "Run Spark Job in Docker"
+        steps:          
+          - script: |
+              mkdir -p /app/output
+              docker run --network=host \
+              -v $(Build.ArtifactStagingDirectory):/app/output \
+              -e BUILD_ARTIFACTSTAGINGDIRECTORY=/app/output \
+              $(DOCKER_HUB_REPO):$(IMAGE_TAG)
+            displayName: "Run Spark Job"
+
+          - task: PublishBuildArtifacts@1
+            inputs:
+              pathToPublish: "$(Build.ArtifactStagingDirectory)"
+              artifactName: "csv-results"
+            displayName: "Upload CSV Results"

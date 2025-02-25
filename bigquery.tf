@@ -25,6 +25,31 @@ locals {
       schema = "budget_rates.json"
       partition = "DateAdded"
     }
+    # weir_equipment = {
+    #   table = "weir_equipment"
+    #   schema = "weir_equipment.json"
+    #   partition = "InstallationDate"
+    # }
+    # weir_staging_equipment = {
+    #   table = "weir_staging_equipment"
+    #   schema = "weir_staging_equipment.json"
+    #   partition = "InstallationDate"
+    # }
+    # weir_staging_equipment_jan = {
+    #   table = "weir_staging_equipment_jan"
+    #   schema = "weir_staging_equipment.json"
+    #   partition = "InstallationDate"
+    # }
+    # weir_staging_equipment_mar = {
+    #   table = "weir_staging_equipment_mar"
+    #   schema = "weir_staging_equipment.json"
+    #   partition = "InstallationDate"
+    # }
+    # weir_staging_equipment_may = {
+    #   table = "weir_staging_equipment_may"
+    #   schema = "weir_staging_equipment.json"
+    #   partition = "InstallationDate"
+    # }
   }
 }
 
